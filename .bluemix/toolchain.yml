@@ -13,9 +13,9 @@ template:
     - sample-repo
   info:
     git url: >-
-      [https://github.com/open-toolchain/simple-toolchain-hosted](https://github.com/open-toolchain/simple-toolchain-hosted)
+      [https://github.com/mkistler/simple-toolchain-hosted](https://github.com/mkistler/simple-toolchain-hosted)
     git branch: >-
-      [master](https://github.com/open-toolchain/simple-toolchain-hosted/tree/master)
+      [master](https://github.com/mkistler/simple-toolchain-hosted/tree/master)
 toolchain:
   name: 'simple-toolchain-{{timestamp}}'
   template:
@@ -23,7 +23,7 @@ toolchain:
       $ref: "#/messages/template.gettingStarted"
 services:
   sample-repo:
-    service_id: hostedgit
+    service_id: githubpublic
     parameters:
       repo_name: '{{toolchain.name}}'
       repo_url: 'https://github.com/open-toolchain/node-hello-world'
